@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Abrir App</title>
+  <script>
+    window.onload = function() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // iOS (iPhone, iPad, iPod)
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "https://apps.apple.com/br/app/novo-proeste/id1563670712";
+      }
+      // Android
+      else if (/android/i.test(userAgent)) {
+        window.location.href = "https://play.google.com/store/apps/details?id=br.com.newproeste&hl=pt_BR";
+      }
+      // Outros dispositivos ou desktop
+      else {
+        window.location.href = "https://www.proeste.com.br";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecionando para a loja do seu sistema...</p>
+</body>
+</html>
